@@ -89,6 +89,10 @@ main{
     transform: translateX(0);
 }
 
+.nav-list.active a{
+    color: #fff;
+}
+
 @keyframes navLinkFade {
     from {
         opacity: 0;
@@ -162,10 +166,6 @@ main{
     -moz-box-shadow: 4px -7px 48px -15px rgba(0,0,0,0.75);
 }
    
-.produto{
-    display: none;
-}
-
 .produto-item{
     text-align: center;
     max-width: auto;
@@ -223,6 +223,7 @@ main{
     color: #333;
     margin-top: 5px;
     font-family: system-ui, -apple-system, Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 .produto-item--name{

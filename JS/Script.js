@@ -1,4 +1,4 @@
-const c = (el)=>document.querySelector(el);
+/*const c = (el)=>document.querySelector(el);
 const cs = (el)=>document.querySelectorAll(el);
 
 produtosJson.map(function (item, index) {
@@ -14,23 +14,22 @@ produtosJson.map(function (item, index) {
     })
 
     c('.Produto-see').append(produtos);
-  });
+  });*/
 
-  function executar(){
-      let texto= document.getElementById('search-txt').value;
-      let historico= document.getElementById('historico');
-      let adicionar= true;
+function executar() {
+  let texto = document.getElementById("search-txt").value;
+  let historico = document.getElementById("historico");
+  let adicionar = true;
 
-      var opt = document.createElement('option');
-    
-      for(i=0; i<historico.options.lenght;i++){
-        if(texto==historico.options[i].value){
-            adicionar=false;
-        }
-      }
-        if(adicionar==true){
-            opt.value=texto;
-            historico.appendChild(opt);
-        }
+  var opt = document.createElement("option");
+
+  for (i = 0; i < historico.options.lenght; i++) {
+    if (texto == historico.options[i].value) {
+      adicionar = false;
+    }
   }
-
+  if (adicionar == true) {
+    opt.value = texto;
+    historico.appendChild(opt);
+  }
+}
