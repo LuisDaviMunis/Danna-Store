@@ -8,18 +8,20 @@ class MobileNavbar {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  animatedLinks() {
-    this.navLinks.forEach((link) => {
+  animateLinks() {
+    this.navLinks.forEach((link, index) => {
       link.style.animation
         ? (link.style.animation = "")
-        : (link.style.animation = `navLinkFade 0.5s ease forwards 0.
-            3s`);
+        : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+            index / 7 + 0.3
+          }s`);
     });
   }
 
   handleClick() {
     this.navList.classList.toggle(this.activeClass);
-    this.animatedLinks();
+    this.mobileMenu.classList.toggle(this.activeClass);
+    this.animateLinks();
   }
 
   addClickEvent() {
@@ -39,6 +41,7 @@ const mobileNavbar = new MobileNavbar(
   ".nav-list",
   ".nav-list li"
 );
+mobileNavbar.init();
 
 function executar() {
   let texto = document.getElementById("search-txt").value;
@@ -59,3 +62,16 @@ function executar() {
 }
 
 mobileNavbar.init();
+
+const password = document.getElementById("password");
+const icon = document.getElementById("icon");
+
+function showHide() {
+  if (password.type === "password") {
+    password.setAttribute("type", "text");
+    icon.classList.add("hide");
+  } else {
+    password.setAttribute("type", "password");
+    icon.classList.remove("hide");
+  }
+}

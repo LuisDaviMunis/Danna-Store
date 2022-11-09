@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("../assets/black.jpg");
+}
+
+.login {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  width: 400px;
+  padding: 40px;
+}
+
+.login h2 {
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+  font-family: system-ui, -apple-system, Arial, Helvetica, sans-serif;
+}
+
+.login .box-user {
+  position: relative;
+}
+
+.login .box-user input {
+  width: 100%;
+  padding: 10px 0;
+  outline: none;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.login .box-user label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login .box-user input:focus ~ label,
+.login .box-user input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #fff;
+  font-size: 12px;
+}
+
+.forget {
+  font-size: 12px;
+  color: #000000;
+  float: right;
+  top: 30px;
+  position: relative;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-top: 20px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background: #fff;
+  border-radius: 5px;
+  color: #172031;
+}
+
+.btn span {
+  position: absolute;
+  display: block;
+}
+
+.btn span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #fff);
+  animation: btn1 1s linear infinite;
+}
+
+@keyframes btn1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.btn span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #fff);
+  animation: btn2 1s linear infinite;
+  animation-delay: 0.2s;
+}
+
+@keyframes btn2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.btn span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(270deg, transparent, #fff);
+  animation: btn3 1s linear infinite;
+  animation-delay: 0.45s;
+}
+
+@keyframes btn3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.btn span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(26deg, transparent, #fff);
+  animation: btn4 1s linear infinite;
+  animation-delay: 0.7s;
+}
+
+@keyframes btn4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+#icon {
+  position: absolute;
+  top: 20%;
+  right: 25px;
+  transform: translateY(-50%);
+  background: url(../assets/eye-solid.svg);
+  background-size: cover;
+  width: 20px;
+  height: 18px;
+  cursor: pointer;
+}
+
+#icon.hide {
+  background: url(../assets/eye-slash-solid.svg);
+  background-size: cover;
+}
+
+.Criar {
+  font-size: 12px;
+  color: #000000;
+  float: right;
+  position: relative;
+  left: 103px;
+}
+
+.criar a {
+  padding-bottom: 20px;
+}
+
+@media (max-width: 405px) {
+  .login {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .login {
+    width: 30vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .login {
+    width: 60vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+    width: 60vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .login {
+    width: 90%;
+  }
+}

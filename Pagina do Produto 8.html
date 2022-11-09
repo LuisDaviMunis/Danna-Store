@@ -1,75 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Danna Store</title>
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
     <header class="topo">
-        <nav>
-            <a href="#" class="logo">Danna Store</a>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <ul class="nav-list">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Mais Vendidos</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <a href="index.html" class="logo">Danna Store</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="Pagina de Tênis.html">Tênis</a></li>
+          <li><a href="pagina de acessórios.html">Acessórios</a></li>
+          <li><a href="Mais Vendidos.html">Mais Vendidos</a></li>
+          <li>
+            <a href="https://github.com/LuisOToxico/Danna-Store"
+              ><img src="./assets/icons8-github-30.svg" alt=""
+            /></a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
+      <div class="back-search">
+        <div class="search-box">
+          <input
+            type="text"
+            id="search-txt"
+            list="historico"
+            placeholder="Pesquisar"
+          />
+          <a href="#" class="search-btn" onclick="executar()">
+            <img src="assets/lupa.svg" width="20px" height="20px" alt="Lupa" />
+          </a>
 
-        <div class="back-search">
-            <div class="search-box">
-                <input type="text" id="search-txt" list="historico" placeholder="Pesquisar">
-                <a href="#" class="search-btn" onclick="executar()">
-                  <img src="assets/lupa.svg" width="20px" height="20px" alt="Lupa">
-                </a>
-        
-                <datalist id="historico">
-                    <option value="Nike"></option>
-                </datalist>
-              </div>
+          <datalist id="historico">
+            <option value="Nike"></option>
+          </datalist>
         </div>
-    
-        <div class="Produto-selecionado">
-            
-            <div class="selected-img">
-              <img class= "prod-select" src="assets/Vans8.jpeg" alt="">
-            
-            </div>
+      </div>
 
-            <div class="info-prod">
-                <a class="Nome" href="">Meia Shinner</a>
-                <a class="Tipo" href="">Acessórios</a>
-                <a class="Vendido" href="">Vendido por: Danna Store </a>
-                <a class="preço" href="">R$: 79,99 </a>
-                <div class="btn-cmpr">
-                    <a href="#">Comprar</a>
-                </div>
-            </div>
-
-
-
+      <div class="Produto-selecionado">
+        <div class="selected-img">
+          <img class="prod-select" src="assets/Vans8.jpeg" alt="" />
         </div>
-            
+
+        <div class="info-prod">
+          <a class="Nome" href="">Meia Shinner</a>
+          <a class="Tipo" href="">Acessórios</a>
+          <a class="Vendido" href="">Vendido por: Danna Store </a>
+          <a class="preço" href="">R$: 79,99 </a>
+          <div class="btn-cmpr">
+            <a href="checkout.html">Comprar</a>
+          </div>
+        </div>
+      </div>
     </main>
     <script src="./JS/mobile-navbar.js"></script>
     <script src="./JS/Produtos.js"></script>
     <script src="./JS/Script.js"></script>
 
     <footer>
-        
-        <div class="text-center">© 2022 Copyright:
-            <a href="#" class="text-secondary">DannaStore.com</a>
-        </div> 
+      <div class="text-center">
+        © 2022 Copyright:
+        <a href="#" class="text-secondary">DannaStore.com</a>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
